@@ -7,7 +7,7 @@ let createStyle;
 const actionCard = (id, data, setSelectData) => {
   const selectedData = data.filter((item) => item.id === id);
   createStyle = {
-    top: window.scrollY-20+"px",
+    top: window.scrollY - 25 + "px",
   };
   selectedData.create = createStyle;
   setSelectData(selectedData);
@@ -22,8 +22,8 @@ function Cards() {
     });
   }, []);
   return (
-    <section >
-      <div className="content" >
+    <section>
+      <div className="content">
         <div className="cards">
           {data.map((item, index) => {
             return (
@@ -37,7 +37,10 @@ function Cards() {
             );
           })}
           {selectData.length > 0 ? (
-            <div className="showCard animate__animated animate__fadeInDown" style={selectData.create}>
+            <div
+              className="showCard animate__animated animate__fadeInDown"
+              style={selectData.create}
+            >
               <div className="actionHeader">
                 <div className="title">
                   <i className="fas fa-circle-notch"></i>
@@ -72,6 +75,9 @@ function Cards() {
                     id="textField-3"
                     placeholder="Text Field"
                   />
+                </div>
+                <div className="action">
+                  <button><i class="fas fa-plus"></i></button>
                 </div>
               </div>
             </div>

@@ -26,6 +26,10 @@ header {
   align-items: center;
 }
 
+.brand .title i{
+  color: #383838;
+}
+
 .logo {
   width: 20%;
   height: auto;
