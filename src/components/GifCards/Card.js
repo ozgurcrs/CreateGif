@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import "./style.css";
 
 function Card(props) {
-  const { memesGif, title, id, actionCard } = props;
+  const { memesGif, title,onClick } = props;
   return (
-    <button onClick={() => actionCard(id)}>
-      <div className="card" >
+
+      <div className="card" onClick={() => {onClick()}} >
         <div className="top">
           <img src={memesGif} alt="" />
         </div>
@@ -28,13 +28,13 @@ function Card(props) {
           </div>
         </div>
       </div>
-    </button>
   );
 }
 
 Card.propTypes = {
   memesGif: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  onClick:PropTypes.func.isRequired
 };
 
 export default Card;
