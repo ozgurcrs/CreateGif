@@ -3,7 +3,7 @@ import Card from './Card'
 import axios from 'axios'
 
 const actionCard = (id) => {
-    console.log(id)
+    
 }
 
 
