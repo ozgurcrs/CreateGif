@@ -1,0 +1,129 @@
+header {
+  width: 100%;
+  height: 100px;
+  background: rgb(33, 33, 33);
+  background: radial-gradient(
+    circle,
+    rgba(33, 33, 33, 1) 0%,
+    rgba(35, 35, 35, 1) 100%
+  );
+  padding: 10px 0;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.brand {
+  width: 37%;
+  height: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.logo {
+  width: 20%;
+  height: auto;
+  position: relative;
+  bottom: 8px;
+  left: 2px;
+  z-index: 2;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  animation: dino 10s infinite;
+}
+
+header h1 {
+  color: rgb(33, 33, 33);
+  font-family: "Exo 2", sans-serif;
+  font-size: 30px;
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+}
+
+header span {
+  font-family: "Exo 2", sans-serif;
+  font-size: 15px;
+  color: rgb(33, 33, 33);
+  font-style: italic;
+  position: relative;
+  z-index: 2;
+}
+
+.lineDesign {
+  position: absolute;
+  left: -10%;
+  width: 40%;
+  border-radius: 30%;
+  height: 100vh;
+  background: #ffbb1c;
+  transform: rotate(140deg);
+  overflow: hidden;
+  object-fit: cover;
+}
+
+nav {
+  width: 50%;
+  height: 70px;
+  position: relative;
+  z-index: 2;
+}
+
+nav ul {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+nav ul li {
+  list-style: none;
+  color: #dadada;
+  cursor: pointer;
+  transition: 500ms;
+  background: #333;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: "Exo 2", sans-serif;
+}
+
+nav ul li:hover {
+  color: #8e8e8e;
+  border-bottom: 5px solid #f9b000;
+}
+
+nav a{
+  text-decoration: none;
+}
+
+nav ul li i {
+  transition: 500ms;
+}
+nav ul li:hover > i {
+  color: #f9b000;
+}
+
+@keyframes dino {
+  0% {
+    filter: grayscale(0);
+    transform: rotate(0deg);
+  }
+  50% {
+    filter: grayscale(1);
+    transform: rotate(5deg);
+  }
+  100% {
+    filter: grayscale(0);
+    transform: rotate(0deg);
+  }
+}
+
