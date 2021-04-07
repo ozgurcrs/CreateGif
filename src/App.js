@@ -1,5 +1,7 @@
 import Index from './pages/index'
 import Popular from './pages/Popular/index'
+import CreatedMeme from './pages/CreatedMeme/index'
+import SignIn from './pages/Login/SignIn'
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,6 +18,12 @@ function App() {
           </Route>
           <Route path="/popular" exact>
             <Popular />
+          </Route>
+          <Route path="/createdMeme" exact>
+            <CreatedMeme />
+          </Route>
+          <Route path="/Login" exact>
+            <SignIn />
           </Route>
         </Switch>
       </Router>

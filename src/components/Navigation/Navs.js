@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 export default function Navs() {
     const navInfo = [
         { "ListName": "Home", "iconName": "far fa-dizzy", "Link": "/" },
-        { "ListName": "Create Gif", "iconName": "far fa-grin-tongue-wink", "Link": "/Create" },
+        { "ListName": "Created Meme", "iconName": "far fa-grin-tongue-wink", "Link": "/CreatedMeme" },
         { "ListName": "Popular", "iconName": "far fa-surprise", "Link": "/Popular" },
         { "ListName": "Trending", "iconName": "far fa-sad-tear", "Link": "/Trending" },
         { "ListName": "Fresh", "iconName": "far fa-grin-tongue-squint", "Link": "/Fresh" }

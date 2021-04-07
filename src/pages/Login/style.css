@@ -1,0 +1,183 @@
+.loginContainer {
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  width: 60%;
+  height: 450px;
+  background: #fff;
+  box-shadow: 0 1px 2px #eee;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.leftLogin {
+  width: 50%;
+  height: 450px;
+}
+
+.logoLogin {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 1px 10px #eee;
+  padding-bottom: 10px;
+}
+
+.logoLogin img {
+  width: 25%;
+  height: auto;
+  animation: logoAnimation 1s infinite ;
+}
+
+.logoLogin h1 {
+  font-family: "Exo 2", sans-serif;
+  font-size: 28px;
+  color: rgb(126, 126, 126);
+  margin-bottom: 10px;
+}
+
+.contentLogin{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+    position: relative;
+}
+
+.contentLogin .inputs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contentLogin input{
+    width: 50%;
+    height: 45px;
+    padding-left: 55px;
+    border:0;
+    border-bottom:1px solid #eee;
+    box-shadow: 0px 0.5px 1px #f8f8f8;
+}
+
+.contentLogin input:focus{
+    outline: none;
+}
+
+.contentLogin label{
+    font-family: 'Mulish',sans-serif;
+    font-size: 18px;
+    color: #333;
+    margin-right: 10px;
+    position: absolute;
+    left:25%;
+    color: rgb(255, 193, 49);
+    
+}
+
+.contentLogin button{
+    width: 60%;
+    height: 45px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #eee;
+    text-align: center;
+    transition: 1s;
+    font-family: 'Mulish',sans-serif;
+    font-size: 18px;
+    color: rgb(255, 193, 49);
+    cursor: pointer;
+}
+
+.contentLogin button:hover{
+    background: rgb(255, 193, 49);
+    color: #fff;
+}
+
+.contentLogin button:focus{
+  outline: none;
+}
+
+.rightLogin {
+  width: 50%;
+  height: 450px;
+  background: rgb(255, 193, 49);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  position: relative;
+  z-index: 999;
+}
+.rightLogin h3 {
+  width: 100%;
+  height: 50px;
+  font-family: "Mulish", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.rightLogin button {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #f8bb39;
+  background: rgba(255, 255, 255,0.9);
+  border-radius: 10px;
+  color: #f8bb39;
+  font-family: "Mulish", sans-serif;
+  font-size: 18px;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.rightLogin button:focus {
+  outline: none;
+}
+.rightLogin button:hover {
+  background: rgba(49, 49, 49, 0.8);
+  color: #fff;
+  border-radius: 30px;
+  border: 0;
+}
+
+.memesLogin {
+  width: 100%;
+  height: 450px;
+  background: url("https://64.media.tumblr.com/ba69ff8e06f1e1969b80085e3ef8d7d8/tumblr_p1h9s8TXbK1s4fz4bo1_500.gifv");
+  opacity: 0.1;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@keyframes logoAnimation {
+    0%{
+    transform: rotate(0deg);  
+    }
+    50%{
+        transform: rotate(3deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}

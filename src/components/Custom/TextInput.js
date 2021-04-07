@@ -1,10 +1,9 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 
  function TextInput(props) {
-    const {type,placeholder,TextID,ref} = props
+    const {type,placeholder,TextID,reference} = props
     return (
-        <input type={type} ref={ref} placeholder={placeholder}  id={TextID}  />
+        <input type={type} name={TextID} ref={reference} placeholder={placeholder}  id={TextID}  />
     )
 }
 
