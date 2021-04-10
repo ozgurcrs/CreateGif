@@ -1,9 +1,8 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import Cards from '../components/GifCards/Cards'
 import Layout from '../Layout/Layout'
 
-
-export default function index() {
+ function Main() {
     return (
         <div className="container">
             <Layout>
@@ -12,3 +11,5 @@ export default function index() {
         </div>
     )
 }
+export default Main
+

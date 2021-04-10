@@ -40,8 +40,9 @@ header {
 }
 
 .logo img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  max-height: 120px;
+  object-fit: cover;
   animation: dino 10s infinite;
 }
 

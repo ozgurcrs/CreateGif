@@ -14,6 +14,7 @@ const actionCard = (id, data, setSelectData) => {
   setSelectData(selectedData);
 };
 
+
 function Cards() {
   const [data, setData] = useState([]);
   const [selectData, setSelectData] = useState([]);
@@ -21,8 +22,8 @@ function Cards() {
     axios.get(process.env.REACT_APP_APIURL+"data/").then((response) => {
       setData(response.data);
     });
- 
   }, []);
+
   return (
     <section>
       <div className="content">
