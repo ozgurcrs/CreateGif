@@ -1,15 +1,25 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 import TextInput from "../../components/Custom/TextInput";
 import Button from "../../components/Custom/Button";
 import { useForm } from "react-hook-form";
+import {connect} from 'react-redux'
+import {getUserAsync, setUser} from '../../store/userAccount/userAction'
 import "./style.css";
 
-const SignIn = () => {
+const SignIn = (props) => {
   const { register, handleSubmit } = useForm();
+  const [users,setUsers] = useState();
 
-  const isLogin = (data) => {
-      console.log(data);
+  const isAuth = (data) => {
+     accountList();
+    console.log({users});
   };
+
+  const accountList = () => {
+     props.getUser();
+    setUsers(props.users.user);
+  }
+
 
   return (
     <div className="loginContainer">
@@ -43,7 +53,7 @@ const SignIn = () => {
               />
             </div>
             <Button
-              onClick={handleSubmit(isLogin)}
+              onClick={handleSubmit(isAuth)}
               textButton="Sign In"
             />
           </div>
@@ -61,4 +71,12 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+const mapStateToProps = (state) => {
+  return state;
+}
+
+const mapDispatchToProps = {
+  getUser:getUserAsync
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(SignIn);

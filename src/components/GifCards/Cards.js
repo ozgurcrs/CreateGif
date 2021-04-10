@@ -1,28 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Card from "./Card";
-import axios from "axios";
 import Popup from "../Popup/Popup";
 
-let createStyle;
-
-const actionCard = (id, data, setSelectData) => {
-  const selectedData = data.filter((item) => item.id === id);
-  createStyle = {
-    top: window.scrollY - 25 + "px",
-  };
-  selectedData.create = createStyle;
-  setSelectData(selectedData);
-};
-
-
-function Cards() {
-  const [data, setData] = useState([]);
-  const [selectData, setSelectData] = useState([]);
-  useEffect(() => {
-    axios.get(process.env.REACT_APP_APIURL+"data/").then((response) => {
-      setData(response.data);
-    });
-  }, []);
+function Cards(props) {
+  const {data,setSelectData,selectData,actionCard} = props
 
   return (
     <section>

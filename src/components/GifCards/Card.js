@@ -32,7 +32,7 @@ function Card(props) {
           </div>
         </div>
         <div className="interaction">
-          <i class="far fa-heart"></i>
+          <i className="far fa-heart"></i>
           </div>
       </div>
     </div>
